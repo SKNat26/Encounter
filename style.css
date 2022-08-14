@@ -11,6 +11,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* MAIN PAGE */
 /* TOP PAGE CSS */
 #top-page {
     padding-bottom: 50px;
@@ -37,6 +38,7 @@ body {
 #intro {
     background-color: var(--babyBlue);
     display: flex;
+    margin: 0;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
@@ -67,16 +69,23 @@ body {
 #blog h3 {
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
+    font-size: 30px;
 }
 
 #chatDiv {
+    display: flex;
+    justify-content: center;
     height: 600px;
-    width: 600px;
+    border: var(--turquoise) 5px solid;
+    width: auto;
+    background-color: white;
 }
 
 #text-submit {
     display: flex;
     justify-content: center;
+    padding-top: 50px;
 }
 
 /* BOTTOM PAGE CSS */
@@ -84,9 +93,138 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--darkBlue);
+    color: var(--cream);
+    font-weight: bold;
 }
 
 #bottom-page p {
     padding-left: 50px;
     padding-right: 50px;
+}
+
+/* SUBMISSION PAGE */
+/* TOP PAGE 2 */
+#top-page2 {
+    background-color: var(--darkBlue);
+    color: var(--cream);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#top-page2 h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+#top-page2 h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 90%;
+}
+
+/* INPUTS */
+#inputs {
+    background-color: var(--babyBlue);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.submissions {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#image-input {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+#location-input {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#name-input {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+}
+
+#submit button{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* PREVIEW */
+#previewDiv {
+    background-color: var(--forestGreen);
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+#previewContent {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: auto;
+    height: 300px;
+    border: var(--turquoise) 5px solid;
+}
+
+#confirm {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+#confirm button {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* INFORMATION */
+
+/* MEDIA QUERIES */
+@media(max-width: 667px) {
+    #title {
+        font-size: 30px;
+    }
+
+    #jump button {
+        font-size: 20px;
+    }
+
+    #intro {
+        flex-direction: column-reverse;
+        font-size: 20px;
+    }
+
+    #intro img {
+        width: 300px;
+    }
+
+    #text {
+        padding-bottom: 10px;
+    }
+
+    #text-submit input {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1180px) {
+    body {
+        width: 1325px;
+    }
 }
