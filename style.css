@@ -1,0 +1,92 @@
+/* VARIABLES */
+:root{
+    --darkBlue: #191970;
+    --cream: #F9EBF3;
+    --turquoise: #3393b6;
+    --forestGreen: #00A385;
+    --babyBlue: #7EC8E3;
+} 
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* TOP PAGE CSS */
+#top-page {
+    padding-bottom: 50px;
+    background-color: var(--darkBlue);
+    color: var(--cream);
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+#jump {
+    display: flex;
+    justify-content: center;
+}
+
+#jump button {
+    font-size: 15px;
+}
+
+/* INTRODUCTION CSS */
+#intro {
+    background-color: var(--babyBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#intro div {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#text {
+    width: 500px;
+    text-align: center;
+}
+
+.funny {
+    width: 500px;
+}
+
+/* BLOG CSS */
+#blog {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--forestGreen);
+}
+
+#blog h3 {
+    display: flex;
+    justify-content: center;
+}
+
+#chatDiv {
+    height: 600px;
+    width: 600px;
+}
+
+#text-submit {
+    display: flex;
+    justify-content: center;
+}
+
+/* BOTTOM PAGE CSS */
+#bottom-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottom-page p {
+    padding-left: 50px;
+    padding-right: 50px;
+}
