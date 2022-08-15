@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WHO'S THAT ANIMAL?</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/owlers-team-logo.png">
+
+    <!-- DATABASES -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script defer src="firebases.js"></script>
+
+    <!-- JS Scripts -->
+    <script defer src="data.js"></script>
+    <script defer src="main.js"></script>
 </head>
 <body>
-
+    
     <div id="top-page">
         <div id="title">
             <h1>WHO'S THAT ANIMAL?</h1>
         </div>
         <div id="jump">
-            <button>Jump to Bottom</button>
+            <a href="#bottom-page">Jump to Bottom</a>
         </div> 
     </div>
 
@@ -42,8 +53,9 @@
 
         </div>
         <div id="text-submit">
-            <input placeholder="Type a Message" type="text">
-            <input type="submit">
+            <input id="username-input" placeholder="Type your Name" type="text">
+            <input id="text-input" placeholder="Type a Message" type="text">
+            <input id="submit-button" type="submit">
         </div>
     </div>
 
@@ -52,7 +64,8 @@
             Feel like submitting something yourself?
             Click the button to your right!
         </p>
-        <button>Share Your Animal!</button>
+        <a href="submission.html" target="#">Share Your Animal!</a>
     </div>
+
 </body>
 </html>
