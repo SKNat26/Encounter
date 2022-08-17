@@ -29,12 +29,13 @@ body {
     font-size: 35px;
 }
 
-#jump {
+.jump {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+    margin: 10px;  
 }
 
-#jump a {
+.jump a {
     font-size: 20px;
     text-decoration: none;
     padding: 7px;
