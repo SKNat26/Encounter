@@ -9,6 +9,15 @@ let nameInput = document.getElementById("name-submit");
 
 const preview = document.getElementById("previewContent");
 
+// ANIMAL API
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'b0164e8021msh9e0422ef936a5f6p166279jsnbe00b58f2c4f',
+		'X-RapidAPI-Host': 'animaliapi3.p.rapidapi.com'
+	}
+};
+
 // buttons
 const submitBtn = document.getElementById("data-submit");
 const confirmBtn = document.getElementById("confirm-response");
@@ -40,6 +49,27 @@ submitBtn.onclick = function (event) {
         preview.appendChild(animalName);
         preview.appendChild(location);
 
+        function displayInfo(animal) {
+            let scienceName = animal.scientificname;
+            let kingdom = animal.kingdom;
+            let order = animal.order;
+
+            console.log(scienceName);
+            console.log(kingdom);
+            console.log(order);
+        };
+
+        fetch(`https://animaliapi3.p.rapidapi.com/all/${nameInput.value}`, options)
+            .then(function (response) {
+                return response.json();
+            })
+
+            .then(displayInfo)
+
+            .catch(function (error) {
+                console.log("Error during fetch:", error)
+            });
+
         previewFull = true;
     }
 }
@@ -67,4 +97,6 @@ confirmBtn.onclick = function (event) {
     else{
         alert("Please make sure all information is filled out and that you looked at the preview!");
     }
+
+
 }
