@@ -6,8 +6,12 @@ let previewFull = false;
 let imageInput = document.getElementById("img-submit");
 let locationInput = document.getElementById("loc-submit");
 let nameInput = document.getElementById("name-submit");
+let extraInput = document.getElementById("extra-submit");
 
-const preview = document.getElementById("previewContent");
+let extraString = "";
+
+const previewLeft = document.querySelector(".left-preview");
+const previewRight = document.querySelector(".right-preview");
 
 // ANIMAL API
 const options = {
@@ -26,62 +30,49 @@ submitBtn.onclick = function (event) {
     event.preventDefault();
 
     if(imageInput.value == "" || locationInput.value == ""){
-        alert("Please provide an image and a location!");
+        alert("Please provide an image, location, and a name!");
         previewFull = false;
     }
     else {
         //removes any previous info
-        preview.textContent = "";
+        previewLeft.textContent = "";
+        previewRight.textContent = "";
 
         let animalImage = document.createElement("img");
         let location = document.createElement("p");
         let animalName = document.createElement("p");
+        let extraInfo = document.createElement("p");
 
         animalImage.classList.add("previewImg");
         location.classList.add("previewTxt");
         animalName.classList.add("previewTxt");
+        extraInfo.classList.add("previewExtra");
 
         animalImage.src = imageInput.value;
         location.innerHTML = locationInput.value;
         animalName.innerHTML = nameInput.value;
+        extraInfo.innerHTML = extraInput.value;
 
-        preview.appendChild(animalImage);
-        preview.appendChild(animalName);
-        preview.appendChild(location);
+        previewLeft.appendChild(animalImage);
+        previewRight.appendChild(animalName);
+        previewRight.appendChild(location);
+        previewRight.appendChild(extraInfo);
 
-        function displayInfo(animal) {
-            let scienceName = animal.scientificname;
-            let kingdom = animal.kingdom;
-            let order = animal.order;
-
-            console.log(scienceName);
-            console.log(kingdom);
-            console.log(order);
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': 'be5579b406msh1f8c2d3ffe74664p193917jsn4f5339d2425a',
+                'X-RapidAPI-Host': 'animaliapi3.p.rapidapi.com'
+            }
         };
-
-        fetch(`https://animaliapi3.p.rapidapi.com/all/${nameInput.value}`, options)
-            .then(function (response) {
-                return response.json();
-            })
-
-            .then(displayInfo)
-
-            .catch(function (error) {
-                console.log("Error during fetch:", error)
-            });
+        
+        fetch(`https://animaliapi3.p.rapidapi.com/all/${processName(nameInput.value)}`, options)
+            .then(response => response.json())
+            .then(response => processAnimalInfo(response.animal,extraInfo))
+            .catch(err => console.error(err));
 
         previewFull = true;
     }
-}
-
-function updateDB() {
-    const entry = {
-        image: imageInput.value,
-        location: locationInput.value,
-        name: nameInput.value
-    }
-
-    submissionDatabase.push(entry);
 }
 
 confirmBtn.onclick = function (event) {
@@ -90,13 +81,42 @@ confirmBtn.onclick = function (event) {
     if(previewFull) {
         if(confirm("Are you sure you want to post this report?")) {
             updateDB();
-            preview.textContent = "";
+            previewLeft.textContent = "";
+            previewRight.textContent = "";
+            imageInput.value = "";
+            locationInput.value = "";
+            nameInput.value = "";
+            extraInput.value = "";
             previewFull = false;
         }
     }
     else{
         alert("Please make sure all information is filled out and that you looked at the preview!");
     }
+}
 
+function updateDB() {
+    const entry = {
+        image: imageInput.value,
+        location: locationInput.value,
+        name: nameInput.value,
+        extra: extraString
+    }
 
+    submissionDatabase.push(entry);
+}
+
+function processName(name) {
+    let newName = "";
+    newName += name.substring(0,1).toUpperCase();
+    newName += name.substring(1,name.length).toLowerCase();
+    return newName;
+}
+
+function processAnimalInfo(data,extra) {
+    if(data != undefined){
+        console.log(data);
+        extra.innerHTML += `<br/><br/>Class Name: ${data.classname}<br/>Family: ${data.family}<br/>Genus: ${data.genus}<br/>Kingdom: ${data.kingdom}<br/>Order: ${data.order}<br/>Phylum: ${data.phylum}<br/>Scientific Name: ${data.scientificname}`;
+        extraString = extra.innerHTML;
+    }
 }

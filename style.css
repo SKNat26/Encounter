@@ -185,6 +185,19 @@ body {
     padding-bottom: 20px;
 }
 
+#extra-input {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    width: 340px;
+    margin:auto;
+}
+
+#extra-submit {
+    resize: vertical;
+    max-height: 300px;
+}
+
 #submit {
     display: flex;
     justify-content: center;
@@ -204,12 +217,21 @@ body {
 
 #previewContent {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-color: white;
-    width: auto;
+    margin: 100px;
     min-height: 300px;
     border: var(--turquoise) 5px solid;
+}
+
+.left-preview {
+    margin-bottom: 50px;
+    margin-left: 100px;
+}
+
+.right-preview {
+    display:flex;
+    flex-direction: column;
+    margin: auto;
 }
 
 .previewImg {
@@ -227,9 +249,24 @@ body {
     color: var(--forestGreen);
 }
 
+.previewExtra {
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: var(--forestGreen);
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
 .report {
-    background-color: var(--babyBlue);
+    background-color: var(--darkBlue);
+    display:flex;
+    width: 80vw;
+    max-width: 90vw;
     margin: 50px;
+    border-radius: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 #confirm {
