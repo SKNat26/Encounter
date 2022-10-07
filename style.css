@@ -1,79 +1,54 @@
 /* VARIABLES */
 :root{
-    --darkBlue: #191970;
-    --cream: #F9EBF3;
-    --turquoise: #3393b6;
-    --forestGreen: #00A385;
-    --babyBlue: #7EC8E3;
+    --cinereous: #93827F;
+    --goldenRod: #F3F9D2;
+    --laurel: #BDC4A7;
+    --jet: #2F2F2F;
+    --cambridge: #92B4A7;
+
+    --headingFont: Staatliches;
+    --headingFont2: Unica One;
+    --normalFont: Raleway;
 } 
 
 #a{
     text-decoration: none;
 }
 
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 /* MAIN PAGE */
 /* TOP PAGE CSS */
-#top-page {
-    padding-bottom: 50px;
-    background-color: var(--darkBlue);
-    color: var(--cream);
+#index {
+    background-color: var(--jet);
 }
 
-#title {
-    display: flex;
-    justify-content: center;
-    font-size: 35px;
+#top-page {
+    padding-bottom: 50px;
+    background-color: var(--jet);
+}
+
+#logo {
+    text-align: center;
+    padding-top: 3%;
+    font-family: var(--headingFont); 
+    font-size: 310%;
+    color: var(--cinereous);
+}
+
+#logo img {
+    height: 300px;
 }
 
 .jump {
     display: flex;
     justify-content: center;
-    margin: 10px;  
-}
-
-.jump a {
-    font-size: 20px;
-    text-decoration: none;
-    padding: 7px;
-    color: var(--cream);
-    background-color: var(--forestGreen); 
-}
-
-/* INTRODUCTION CSS */
-#intro {
-    background-color: var(--babyBlue);
-    display: flex;
-    margin: 0;
-    font-size: 19px;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-#intro div {
-    padding-left: 70px;
-    padding-right: 70px;
-}
-
-#text {
-    width: 500px;
-    text-align: center;
-}
-
-.funny {
-    width: 500px;
+    margin-top: 5%;
 }
 
 /* BLOG CSS */
 #blog {
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: var(--forestGreen);
+    background-color: var(--goldenRod);
 }
 
 #blog h3 {
@@ -89,14 +64,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 400px;
-    border: var(--turquoise) 5px solid;
+    border: var(--goldenRod) 5px solid;
     width: auto;
-    background-color: white;
+    background-color: var(--goldenrod)  ;
     font-size: 20px;
 }
 
 #text-submit {
-    display: flex;
+    display: none;
     justify-content: center;
     padding-top: 50px;
 }
@@ -106,49 +81,63 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--darkBlue);
-    color: var(--cream);
-    font-weight: bold;
+    position: sticky;
+    bottom: 0px;
+    background-color: var(--jet);
+    color: var(--laurel);
+    font-family: var(--headingFont);
 }
 
 #bottom-page p {
-    font-size: 20px;
+    font-size: 40px;
     padding-left: 50px;
     padding-right: 50px;
 }
 
 #bottom-page a {
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
     padding: 7px;
-    color: var(--cream);
-    background-color: var(--forestGreen); 
+    margin: 10px;
+    color: var(--goldenRod);
+    background-color: var(--cinereous); 
 }
 
+
 /* SUBMISSION PAGE */
+#submitPage {
+    background-color: var(--jet);
+}
+
 /* TOP PAGE 2 */
 #top-page2 {
-    background-color: var(--darkBlue);
-    color: var(--cream);
+    background-color: var(--jet);
+    color: var(--cinereous);
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: var(--headingFont);
 }
 
 #top-page2 h1 {
     display: flex;
     justify-content: center;
-    font-size: 40px;
+    font-size: 500%;
+    font-weight: lighter;
+    margin-bottom: 20px;
 }
 
 #top-page2 h2 {
     display: flex;
     justify-content: center;
-    font-size: 90%;
+    margin-top: 0px;
+    margin-bottom: 0;
+    font-size: 200%;
+    font-weight: lighter;
 }
 
 /* INPUTS */
 #inputs {
-    background-color: var(--babyBlue);
+    background-color: var(--laurel);
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -157,6 +146,12 @@ body {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
+    color: var(--goldenRod);
+    background-color: var(--cambridge);
+}
+
+#appear {
+    display:none;
 }
 
 #image-input {
@@ -210,28 +205,28 @@ body {
 
 /* PREVIEW */
 #previewDiv {
-    background-color: var(--forestGreen);
     padding-top: 50px;
     padding-bottom: 30px;
 }
 
 #previewContent {
     display: flex;
-    background-color: white;
     margin: 100px;
     min-height: 300px;
-    border: var(--turquoise) 5px solid;
+    border: var(--cambridge) 5px solid;
 }
 
 .left-preview {
     margin-bottom: 50px;
     margin-left: 100px;
+    background-color: var(--cambridge);
 }
 
 .right-preview {
     display:flex;
     flex-direction: column;
     margin: auto;
+    background-color: var(--cambridge);
 }
 
 .previewImg {
@@ -239,30 +234,32 @@ body {
     margin-top: 50px;
     height: 500px;
     max-width: 1700px;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
 }
 
 .previewTxt {
-    font-size: 25px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-size: 70px;
+    font-family: var(--headingFont2);
     text-align: center;
-    color: var(--forestGreen);
+    margin: 1%;
+    color: var(--goldenRod);
 }
 
 .previewExtra {
     font-size: 25px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    color: var(--forestGreen);
+    font-family: var(--normalFont);
+    font-weight: 1000;
+    color: var(--jet);
     margin-right: 200px;
     margin-left: 200px;
 }
 
 .report {
-    background-color: var(--darkBlue);
+    background-color: var(--cambridge);
     display:flex;
-    width: 80vw;
-    max-width: 90vw;
+    width: 70vw;
     margin: 50px;
     border-radius: 50px;
     padding-right: 50px;
@@ -280,7 +277,52 @@ body {
     font-weight: bold;
 }
 
-/* INFORMATION */
+/* ABOUT ME + SOURCES*/
+#about {
+    background-color: var(--jet);
+}
+
+#top-page3 {
+    background-color: var(--jet);
+    color: var(--laurel)
+}
+
+#main-heading {
+    text-align: center;
+    font-family: var(--headingFont);
+    font-size: 500%;
+}
+
+.about-heading {
+    text-align: center;
+    font-family: var(--headingFont);
+    font-size: 350%;
+}
+
+#top-heading-items {
+    text-align: center;
+    display: flex; 
+}
+
+.about-image{
+    margin-right: 10%;
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 40px;
+} 
+
+.about-text {
+    font-family: var(--normalFont);
+    font-size: 160%;
+    margin-right: 12%;
+    margin-left: 10%;
+}
+
+#development-items {
+    text-align: center;
+    display: flex;
+}
 
 /* MEDIA QUERIES */
 @media(max-width: 667px) {

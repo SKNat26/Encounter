@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUBMIT YOUR ANIMALS</title>
+    <title>Submit</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/owlers-team-logo.png">
+    <link rel="icon" href="images/icon.png">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Staatliches' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
     <!-- DATABASES -->
     <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -16,16 +22,17 @@
     
     <script src="reports.js" defer></script>
 </head>
-<body>
+
+<body id="submitPage">
     <div id="top-page2">
-        <h1>WHAT'S THAT ANIMAL?</h1>
-        <h2>Submit Your Information Here</h2>
+        <h1>SUBMIT</h1>
+        <h2>Enter Information Here</h2>
     </div>
     
     <div id="inputs">
         <div id="image-input">
-            Make sure you converted the image on a separate platform. This input only supports URL's!
             <input id="img-submit" placeholder="Enter URL of image" class="submissions" type="input">
+            <p id="appear">Make sure you converted the image on a separate platform such as Imgur. This input only supports URL's.</p>
         </div>
         <div id="location-input">
             <input id="loc-submit" placeholder="Enter Location" class="submissions" type="input">
@@ -37,7 +44,7 @@
             <textarea id="extra-submit" placeholder="Enter any extra notes" class="submissions"></textarea>
         </div>
 
-        <div id="submit" class="submissions">
+        <div id="submit">
             <button id="data-submit">SUBMIT RESPONSES</button>
         </div>
     </div>

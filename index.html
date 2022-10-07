@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHAT'S THAT ANIMAL?</title>
+    <title>Encounter</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/owlers-team-logo.png">
+    <link rel="icon" href="images/icon.png">
+    
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Staatliches' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
     <!-- DATABASES -->
     <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -18,38 +24,16 @@
     <!-- JS Scripts -->
     <script defer src="main.js"></script>
 </head>
-<body>
+<body id="index">
     
     <div id="top-page">
-        <div id="title">
-            <h1>WHAT'S THAT ANIMAL?</h1>
-        </div>
-        <div class="jump">
-            <a href="#bottom-page">Jump to Bottom</a>
-        </div> 
-    </div>
-
-    <div id="intro">
-        <div>
-            <img class="funny" src="images/koala.gif" alt="funny-animal-gif">
-        </div>
-        <div id="text">
-            <h2>Our Goal</h2>
-            <p>
-                Animals live everywhere; in the city, caves, oceans, skies, and much more. However, what if there
-                was an website that allows users to immediately receieve information about these animals. With one picture
-                (and a name if possible), we will be able to create a network of people sharing animal reports! Our special 
-                blog will get these recorded submissions and you will be able to communicate with other users! Grow a 
-                community and share your animals!
-            </p>
-        </div>
-        <div>
-            <img class="funny" src="images/fox-funny.gif" alt="funny-animal-gif">
+        <div id="logo">
+            <img src="images/logo-no-background.png">
+            <p>Share Your Findings. Know Your Environment.</p>
         </div>
     </div>
 
     <div id="blog">
-        <h3>SEE WHAT OTHER USER'S HAVE ALREADY POSTED!</h3>
         <div id="chatDiv">
 
         </div>
@@ -66,9 +50,8 @@
             Click the button to your right!
         </p>
         <a href="submission.html" target="#">Share Your Animal!</a>
-        <div class="jump">
-            <a href="#top-page">Jump to Top</a>
-        </div> 
+        <a href="about+sources.html" target="#">About and Sources</a>
+        <a href="#top-page">Jump to Top</a>             
     </div>
 
 </body>

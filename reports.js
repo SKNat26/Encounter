@@ -9,7 +9,7 @@ let nameInput = document.getElementById("name-submit");
 let extraInput = document.getElementById("extra-submit");
 
 let extraString = "";
-
+    
 const previewLeft = document.querySelector(".left-preview");
 const previewRight = document.querySelector(".right-preview");
 
