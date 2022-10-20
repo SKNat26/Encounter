@@ -70,12 +70,6 @@
     font-size: 20px;
 }
 
-#text-submit {
-    display: none;
-    justify-content: center;
-    padding-top: 50px;
-}
-
 /* BOTTOM PAGE CSS */
 #bottom-page {
     display: flex;
@@ -97,8 +91,9 @@
 #bottom-page a {
     font-size: 25px;
     text-decoration: none;
-    padding: 7px;
+    padding: 10px;
     margin: 10px;
+    border-radius: 20px;
     color: var(--goldenRod);
     background-color: var(--cinereous); 
 }
@@ -112,9 +107,10 @@
 /* TOP PAGE 2 */
 #top-page2 {
     background-color: var(--jet);
-    color: var(--cinereous);
+    color: var(--laurel);
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 40px;
     font-family: var(--headingFont);
 }
 
@@ -146,8 +142,11 @@
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    color: var(--goldenRod);
-    background-color: var(--cambridge);
+    color: var(--jet);
+    background-color: var(--goldenRod);
+    border-color: var(--laurel);
+    outline: none;
+    border-radius: 20px;
 }
 
 #appear {
@@ -180,12 +179,43 @@
     padding-bottom: 20px;
 }
 
+#date-input {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#date-submit {
+    width: 335px;
+}
+
 #extra-input {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
     width: 340px;
     margin:auto;
+}
+
+#scientific-input {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#taxon {
+    margin-bottom: 30px;
+    font-family: var(--normalFont);
+    font-weight: bold;
+    font-size: 20px;
+    background-color: var(--goldenRod);
+    margin: auto;
+    width: 340px;
+    border-radius: 20px;
+}
+
+#taxon p {
+    text-align: center;
 }
 
 #extra-submit {
@@ -198,9 +228,40 @@
     justify-content: center;
 }
 
-#submit button{
+#data-submit{
     font-size: 15px;
     font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--goldenRod);
+    height: 40px;
+    width: 180px;
+    margin-right: 30px;
+}
+
+#find-taxon{
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--goldenRod);
+    height: 40px;
+    width: 180px;
+    margin-right: 30px;
+}
+
+#add-more {
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--goldenRod);
+    height: 40px;
+    width: 180px;
+}
+
+#submit button:hover {
+    background-color: #f3f9d29f;
 }
 
 /* PREVIEW */
@@ -213,47 +274,140 @@
     display: flex;
     margin: 100px;
     min-height: 300px;
-    border: var(--cambridge) 5px solid;
+    border: var(--laurel) 5px solid;
+    background-color: var(--cambridge);
 }
 
 .left-preview {
     margin-bottom: 50px;
     margin-left: 100px;
-    background-color: var(--cambridge);
 }
 
 .right-preview {
     display:flex;
     flex-direction: column;
     margin: auto;
-    background-color: var(--cambridge);
 }
 
 .previewImg {
     margin: auto;
-    margin-top: 50px;
-    height: 500px;
-    max-width: 1700px;
+    margin-top: 100px;
+    margin-bottom:50px;
     height: 400px;
     width: 400px;
+    border-radius: 20px;
     object-fit: cover;
+}
+
+.previewDate {
+    margin-bottom: 40px;
+    color: var(--goldenRod);
+    font-size: 40px;
+    font-weight: bolder;
+    text-shadow: var(--jet) 1px 1px;
+    font-family: var(--normalFont);
 }
 
 .previewTxt {
     font-size: 70px;
     font-family: var(--headingFont2);
     text-align: center;
-    margin: 1%;
+    margin: 10px;
+}
+
+.nameColor {
     color: var(--goldenRod);
+    margin-top: 50px;
+}
+
+.locationColor {
+    margin-bottom: 30px;
+    color: rgb(185, 49, 49);
+    text-shadow: rgb(90, 6, 6) 2px 2px;
 }
 
 .previewExtra {
     font-size: 25px;
     font-family: var(--normalFont);
     font-weight: 1000;
-    color: var(--jet);
-    margin-right: 200px;
-    margin-left: 200px;
+    color: var(--goldenRod);
+    text-shadow: var(--cinereous) 2px 2px;
+    line-height: 35px;
+    margin: auto;
+}
+
+.previewExtraDiv {
+    height: 400px;
+    width: 700px;
+    overflow: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.apiData {
+    display: none;
+    flex-direction: column;
+    margin: auto;
+}
+
+.apiHeading {
+    font-size: 40px;
+    text-align: center;
+    font-family: var(--headingFont);
+    color: var(--goldenRod);
+    text-shadow: var(--laurel) 2px 2px;
+}
+
+.apiImage {
+    margin-top: 10px;
+    margin-bottom:10px;
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.apiIUCN {
+    font-size: 30px;
+    text-align: center;
+    font-family: var(--headingFont);
+    color: rgb(234, 9, 9);
+}
+
+.apiDate {
+    font-size: 25px;
+    text-align: center;
+    font-family: var(--normalFont);
+    font-weight: bold;
+    color: rgb(138, 9, 9);
+}
+
+.apiCoords {
+    font-size: 25px;
+    text-align: center;
+    font-family: var(--normalFont);
+    font-weight: bold;
+    color: rgb(138, 9, 9);
+}
+
+.apiLocation {
+    font-size: 25px;
+    text-align: center;
+    font-family: var(--normalFont);
+    font-weight: bold;
+    color: rgb(138, 9, 9);
+}
+
+.seeMore {
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--goldenRod);
+    height: 40px;
+    width: 180px;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
 .report {
@@ -275,6 +429,15 @@
 #confirm button {
     font-size: 15px;
     font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--goldenRod);
+    height: 40px;
+    width: 180px;
+}
+
+#confirm button:hover {
+    background-color: #f3f9d29f;
 }
 
 /* ABOUT ME + SOURCES*/
@@ -290,6 +453,7 @@
 #main-heading {
     text-align: center;
     font-family: var(--headingFont);
+    margin-bottom: 50px;
     font-size: 500%;
 }
 
@@ -297,6 +461,7 @@
     text-align: center;
     font-family: var(--headingFont);
     font-size: 350%;
+    margin-bottom: 70px;
 }
 
 #top-heading-items {
@@ -306,6 +471,7 @@
 
 .about-image{
     margin-right: 10%;
+    margin-top: 7%;
     width:  300px;
     height: 300px;
     object-fit: cover;
@@ -315,8 +481,9 @@
 .about-text {
     font-family: var(--normalFont);
     font-size: 160%;
+    text-align: justify;
     margin-right: 12%;
-    margin-left: 10%;
+    margin-left: 12%;
 }
 
 #development-items {
@@ -324,36 +491,97 @@
     display: flex;
 }
 
+#middle-about-page {
+    margin-top: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--laurel);
+    color: var(--jet)
+}
+
+#role-items {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#role-items p {
+    margin-bottom: 0px;
+}
+
+#role-items ul {
+    list-style-type: none;
+}
+
+#role-items li {
+    padding: 40px;
+}
+
+#tool-items {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#tool-items p {
+    margin-bottom: 0px;
+}
+
+#tool-items ul {
+    list-style-type: none;
+    margin-left: 100px;
+}
+
+#tool-items li {
+    padding: 40px;
+}
+
+.tool-sections {
+    display: flex;
+    margin-top: 50px;
+}
+
+.tool-sections a {
+    margin-left: 200px;
+}
+
+.tool-image {
+    width: 500px;
+    height:350px;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+#bottom-about-page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position:sticky;
+    bottom: 20px;
+    text-align: center;
+    font-family: var(--headingFont);
+}
+
+#bottom-about-page a {
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    color: var(--goldenRod);
+    background-color: var(--cinereous);
+}
+
 /* MEDIA QUERIES */
-@media(max-width: 667px) {
-    #title {
-        font-size: 30px;
-    }
-
-    #jump button {
-        font-size: 20px;
-    }
-
-    #intro {
-        flex-direction: column-reverse;
-        font-size: 20px;
-    }
-
-    #intro img {
+@media(max-width: 1400px) {
+    .previewImg{
+        height: 300px;
         width: 300px;
-    }
-
-    #text {
-        padding-bottom: 10px;
-    }
-
-    #text-submit input {
-        font-size: 20px;
     }
 }
 
-@media(max-width: 1180px) {
-    body {
-        width: 1325px;
+@media(max-width: 1000px) {
+    .previewImg{
+        height: 200px;
+        width: 200px;
     }
 }

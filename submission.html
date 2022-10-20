@@ -31,21 +31,35 @@
     
     <div id="inputs">
         <div id="image-input">
-            <input id="img-submit" placeholder="Enter URL of image" class="submissions" type="input">
+            <input id="img-submit" placeholder="Enter URL of Image" class="submissions" type="input">
             <p id="appear">Make sure you converted the image on a separate platform such as Imgur. This input only supports URL's.</p>
         </div>
-        <div id="location-input">
-            <input id="loc-submit" placeholder="Enter Location" class="submissions" type="input">
-        </div>
         <div id="name-input">
-            <input id="name-submit" placeholder="Enter Animal" class="submissions" type="input">
+            <input id="name-submit" placeholder="Enter Animal" class="submissions" type="input" maxlength="20">
+        </div>
+        <div id="scientific-input">
+            <input id="scientific-submit" placeholder="(OPTIONAL) Scientific Name" class="submissions" type="input" maxlength="20">
+        </div>
+        <div id="location-input">
+            <input id="loc-submit" placeholder="Enter Location" class="submissions" type="input" maxlength="20">
+        </div>
+        <div id="date-input">
+            <input id="date-submit" placeholder="Date" class="submissions" type="date">
         </div>
         <div id="extra-input">
             <textarea id="extra-submit" placeholder="Enter any extra notes" class="submissions"></textarea>
         </div>
+        <div id="taxon">
+            <p>Taxon Key:</p>
+        </div>
+        <!-- <div id="password-input">
+            <input id="password-submit" placeholder="Enter Password" class="submissions" type="input" maxlength="20">
+        </div> -->
 
         <div id="submit">
             <button id="data-submit">SUBMIT RESPONSES</button>
+            <button id="find-taxon">FIND TAXON KEY</button>
+            <button id="add-more">ADD MORE INFO</button>
         </div>
     </div>
 
@@ -64,8 +78,8 @@
         </div>
     </div>
     
-    <div id="information">
-        
+    <div id="bottom-about-page">
+        <a href="index.html">Home Page</a>
     </div>
 
 </body>
